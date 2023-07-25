@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Entity.Concrete.Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int count = 0;
+}
+
+<h1>Kategori Listesi</h1>
+
+<div class="container">
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Kategori Adı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.CategoryName</td>
+                <td><a href="/Category/DeleteCategory/@item.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Category/UpdateCategory/@item.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Category/AddCategory/" class="btn btn-primary">Yeni Kategori Girişi</a>
+</div>

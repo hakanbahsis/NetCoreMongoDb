@@ -1,0 +1,18 @@
+﻿@model Entity.Concrete.Category
+
+@{
+    ViewData["Title"] = "AddCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Yeni Kategori Ekleme</h1>
+<hr />
+<form method="post">
+    <div class="input-group mb-3 border">
+        <input type="text" asp-for="CategoryName" class="form-control text-black" placeholder="Kategori Adı">
+    </div>
+
+    <button class="btn btn-success">Kaydet</button>
+</form>
+
+

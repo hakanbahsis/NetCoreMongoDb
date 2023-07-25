@@ -1,0 +1,28 @@
+﻿@model Entity.Concrete.Product
+
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>UpdateProduct</h1>
+
+<h1>Ürün Güncelleme</h1>
+<hr />
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="input-group mb-3 border">
+        <input type="text" asp-for="ProductName" class="form-control text-black" placeholder="Ürün Adı">
+    </div>
+  @*  <div class="input-group mb-3 border">
+        <input type="text" asp-for="Category.CategoryName" class="form-control text-black" placeholder="Kategori Adı">
+    </div>*@
+    <div class="input-group mb-3 border">
+        <input type="text" asp-for="Price" class="form-control text-black" placeholder="Ürün Fiyatı">
+    </div>
+    <div class="input-group mb-3 border">
+        <input type="text" asp-for="Stock" class="form-control text-black" placeholder="Stok Adeti">
+    </div>
+
+    <button class="btn btn-success">Kaydet</button>
+</form>
